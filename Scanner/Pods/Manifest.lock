@@ -1,0 +1,16 @@
+PODS:
+  - CircleMenu (4.1.0)
+
+DEPENDENCIES:
+  - CircleMenu (~> 4.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CircleMenu
+
+SPEC CHECKSUMS:
+  CircleMenu: a66095199a5e26f19acbb212f077010257767fe5
+
+PODFILE CHECKSUM: c5dfcec8dfd9fd4027637695394d4ab102aca78a
+
+COCOAPODS: 1.6.1
