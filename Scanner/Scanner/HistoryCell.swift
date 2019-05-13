@@ -42,17 +42,19 @@ class HistoryCell: UITableViewCell {
         
         cellImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
         cellImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        //cellImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).priority = UILayoutPriority(999);
         cellImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
+        //cellImageView.widthAnchor.constraint(equalToConstant: 100).priority = UILayoutPriority(999);
         cellImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        //cellImageView.heightAnchor.constraint(equalToConstant: 100).priority = UILayoutPriority(999);
         cellImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-        
-        nameLabel.leftAnchor.constraint(equalTo: self.cellImageView.rightAnchor, constant: 3).isActive = true
+        nameLabel.leftAnchor.constraint(equalTo: self.cellImageView.rightAnchor, constant: 4).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         
-        codeLabel.leftAnchor.constraint(equalTo: self.cellImageView.rightAnchor, constant: 3).isActive = true
+        codeLabel.leftAnchor.constraint(equalTo: self.cellImageView.rightAnchor, constant: 4).isActive = true
         codeLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 8).isActive = true
         codeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
         codeLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true

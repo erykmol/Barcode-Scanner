@@ -38,6 +38,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         self.navigationController?.navigationBar.setBackgroundImage (UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         
         session.beginConfiguration()
         let videoDevice = AVCaptureDevice.default(.builtInDualCamera, for: AVMediaType.video, position: .back)

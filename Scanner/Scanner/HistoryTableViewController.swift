@@ -16,12 +16,15 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isTranslucent = false
+        
         let history = UserDefaults.standard.array(forKey: "history") as! [Any]
         userDefaultsData = history
         
         self.tableView.register(HistoryCell.self, forCellReuseIdentifier: "historyCell")
-        self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
+        //self.tableView.rowHeight = 100;
     }
     // MARK: - Table view data source
 
@@ -33,7 +36,8 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell") as! HistoryCell
-
+        //cell.translatesAutoresizingMaskIntoConstraints = false
+        
         cell.backgroundColor = UIColor(white: 0.315, alpha: 1.0)
         cell.layoutSubviews()
         
@@ -62,5 +66,15 @@ class HistoryTableViewController: UITableViewController {
         let DetailsController = segue.destination as! DetailsViewController
         DetailsController.stringScan = self.selectedCell.codeLabel.text!.components(separatedBy: " ")[2]
     }
+
+//    override func viewWillAppear(_ animated : Bool) {
+//        super.viewWillDisappear(animated)
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
+//
+//    override func viewWillDisappear(_ animated : Bool) {
+//        super.viewWillDisappear(animated)
+//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//    }
 
 }

@@ -18,15 +18,25 @@ class MainMenuViewController: UIViewController {
         
         self.navigationController?.navigationBar.setBackgroundImage (UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         
         circleMainMenu.delegate = self
         circleMainMenu.layer.cornerRadius = circleMainMenu.bounds.size.width / 2.0
         circleMainMenu.layer.masksToBounds = true
         circleMainMenu.tintColor = UIColor.white
         // Do any additional setup after loading the view.
+    
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     // MARK: - Navigation
 
 }

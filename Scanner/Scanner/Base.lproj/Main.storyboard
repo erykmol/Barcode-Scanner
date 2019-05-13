@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="134"/>
+            <point key="canvasLocation" x="878" y="134"/>
         </scene>
         <!--Details-->
         <scene sceneID="7LP-Kg-piG">
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLr-Qa-Las" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="878" y="940"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="hHE-uK-mP9">
@@ -144,7 +144,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTs-wq-1nW" customClass="CircleMenu" customModule="CircleMenu">
-                                <rect key="frame" x="135" y="289" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="315.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="K6H-Rt-hJm"/>
+                                    <constraint firstAttribute="width" constant="100" id="qDH-Aa-ras"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="FoodIcon.PNG"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
@@ -170,10 +174,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aTs-wq-1nW" firstAttribute="leading" secondItem="TXe-FK-aLZ" secondAttribute="leading" constant="135" id="CPg-vu-9CA"/>
-                            <constraint firstItem="TXe-FK-aLZ" firstAttribute="trailing" secondItem="aTs-wq-1nW" secondAttribute="trailing" constant="140" id="Iaa-vJ-6AD"/>
-                            <constraint firstItem="aTs-wq-1nW" firstAttribute="top" secondItem="TXe-FK-aLZ" secondAttribute="top" constant="225" id="gnB-C0-8TK"/>
-                            <constraint firstItem="TXe-FK-aLZ" firstAttribute="bottom" secondItem="aTs-wq-1nW" secondAttribute="bottom" constant="278" id="y36-aG-cYJ"/>
+                            <constraint firstItem="aTs-wq-1nW" firstAttribute="centerX" secondItem="TXe-FK-aLZ" secondAttribute="centerX" id="BjY-NQ-0Sf"/>
+                            <constraint firstItem="aTs-wq-1nW" firstAttribute="centerY" secondItem="TXe-FK-aLZ" secondAttribute="centerY" id="QG9-qN-MfS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TXe-FK-aLZ"/>
                     </view>
@@ -188,14 +190,14 @@
             </objects>
             <point key="canvasLocation" x="58" y="134"/>
         </scene>
-        <!--History Table View Controller-->
+        <!--History-->
         <scene sceneID="Tve-xs-fRO">
             <objects>
                 <tableViewController id="zOz-3W-fTf" customClass="HistoryTableViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="suN-8u-f1X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections/>
@@ -204,19 +206,20 @@
                             <outlet property="delegate" destination="zOz-3W-fTf" id="bgZ-KT-xYY"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="History" id="77Y-A1-ppC"/>
                     <connections>
                         <segue destination="eim-jk-IC3" kind="show" identifier="DetailsViewSegue" id="bcs-Eh-uhH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZ2-rA-h3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="872"/>
+            <point key="canvasLocation" x="57" y="940"/>
         </scene>
     </scenes>
     <resources>
         <image name="FoodIcon.PNG" width="3300" height="2550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WUf-VL-sj5"/>
+        <segue reference="bcs-Eh-uhH"/>
     </inferredMetricsTieBreakers>
 </document>
