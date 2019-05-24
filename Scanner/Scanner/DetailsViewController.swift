@@ -26,7 +26,7 @@ class DetailsViewController: UIViewController {
         }
 
         
-        self.scanOutput.text = "Kod kreskowy: \(stringScan!)"
+        self.scanOutput.text = "Barcode number: \(stringScan!)"
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
@@ -53,14 +53,12 @@ class DetailsViewController: UIViewController {
                     }
                     DispatchQueue.main.async() {
                         if let name = product["product_name"] as? String {
-                            self.nameOutput.text = "Nazwa: \(name)"
+                            self.nameOutput.text = "Name: \(name)"
                         }
                     }
-                    if let ingredients = product["ingredients_text_pl"] as? String {
+                    if let ingredients = product["ingredients_text_en"] as? String {
                         DispatchQueue.main.async() {
-//                            let splitedIngredients = ingredients.components(separatedBy: "Składniki:")
-//                            self.nameOutput.text = "Nazwa: \(splitedIngredients[0])"
-                            let ingr = "Składniki: \n-" + ingredients.replacingOccurrences(of: ", ", with: "\n-")
+                            let ingr = "Ingredients: \n-" + ingredients.replacingOccurrences(of: ", ", with: "\n-")
 
                             self.dbOutput.text = "\(ingr)"
                         }
